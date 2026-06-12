@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %}仪表盘 - 管理面板{% endblock %}
+
+{% block content %}
+<h1>📊 仪表盘</h1>
+<p>欢迎，{{ username }}。</p>
+
+<div class="stats-grid">
+    <div class="stat-card">
+        <span class="stat-number">{{ stats.active_users }}</span>
+        <span class="stat-label">活跃用户</span>
+    </div>
+    <div class="stat-card">
+        <span class="stat-number">{{ stats.deleted_users }}</span>
+        <span class="stat-label">已注销用户</span>
+    </div>
+    <div class="stat-card">
+        <span class="stat-number">{{ stats.total_messages }}</span>
+        <span class="stat-label">消息总数</span>
+    </div>
+    <div class="stat-card">
+        <span class="stat-number">{{ stats.total_files }}</span>
+        <span class="stat-label">上传文件</span>
+    </div>
+</div>
+{% endblock %}

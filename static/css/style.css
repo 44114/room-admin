@@ -1,0 +1,65 @@
+* { margin:0; padding:0; box-sizing:border-box; }
+html { font-size:15px; }
+body { font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif; background:#f0f2f5; color:#2c3e50; min-height:100vh; display:flex; flex-direction:column; }
+
+.navbar { background:#1e2a3a; padding:0 1.5rem; height:56px; display:flex; align-items:center; }
+.nav-container { width:100%; max-width:1200px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; }
+.nav-brand { color:#fff; font-weight:700; font-size:1.1rem; text-decoration:none; }
+.nav-links { display:flex; align-items:center; gap:1rem; }
+.nav-link { color:#bdc3c7; text-decoration:none; font-size:0.9rem; }
+.nav-link:hover { color:#fff; }
+.nav-user { color:#7f8c8d; font-size:0.85rem; }
+.btn-link { background:none; border:none; color:#e74c3c; cursor:pointer; font-size:0.85rem; }
+
+.main-content { flex:1; width:100%; max-width:1200px; margin:0 auto; padding:1.5rem; }
+
+.flash { padding:0.75rem 1rem; border-radius:6px; margin-bottom:0.5rem; font-size:0.9rem; border-left:4px solid; }
+.flash-success { background:#e8f5e9; color:#2e7d32; border-color:#2e7d32; }
+.flash-error { background:#ffebee; color:#c62828; border-color:#c62828; }
+.flash-info { background:#e3f2fd; color:#1565c0; border-color:#1565c0; }
+.flash-warning { background:#fff3e0; color:#e65100; border-color:#e65100; }
+
+.auth-container { display:flex; justify-content:center; align-items:center; min-height:70vh; }
+.auth-card { background:#fff; border-radius:10px; padding:2.5rem; width:100%; max-width:440px; box-shadow:0 8px 30px rgba(0,0,0,0.08); }
+.auth-card h1 { font-size:1.5rem; margin-bottom:0.5rem; }
+.auth-card p { color:#7f8c8d; margin-bottom:1.5rem; }
+
+.form-group { margin-bottom:1.25rem; }
+.form-group label { display:block; font-weight:600; margin-bottom:0.35rem; font-size:0.9rem; }
+.form-group input[type="text"],
+.form-group input[type="password"] { width:100%; padding:0.7rem 0.9rem; border:2px solid #e0e4e8; border-radius:6px; font-size:0.95rem; background:#f8f9fa; }
+.form-group input:focus { outline:none; border-color:#4f6ef7; }
+
+.btn { display:inline-block; padding:0.65rem 1.3rem; border:none; border-radius:6px; font-size:0.9rem; font-weight:600; cursor:pointer; background:#4f6ef7; color:#fff; }
+.btn:hover { background:#3b5de7; }
+.btn-danger { background:#e74c3c; }
+.btn-danger:hover { background:#c0392b; }
+.btn-success { background:#27ae60; }
+.btn-success:hover { background:#219a52; }
+.btn-sm { padding:0.3rem 0.7rem; font-size:0.8rem; border:none; border-radius:4px; cursor:pointer; background:#4f6ef7; color:#fff; }
+.btn-sm.btn-danger { background:#e74c3c; }
+.btn-sm.btn-success { background:#27ae60; }
+
+.stats-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:1rem; margin-top:1.5rem; }
+.stat-card { background:#fff; border-radius:10px; padding:1.5rem; text-align:center; box-shadow:0 2px 8px rgba(0,0,0,0.05); }
+.stat-number { display:block; font-size:2.5rem; font-weight:700; color:#4f6ef7; }
+.stat-label { display:block; font-size:0.85rem; color:#7f8c8d; margin-top:0.5rem; }
+
+.data-table { width:100%; background:#fff; border-radius:10px; overflow:hidden; box-shadow:0 2px 8px rgba(0,0,0,0.05); border-collapse:collapse; margin-top:1rem; }
+.data-table th { background:#f8f9fa; text-align:left; padding:0.75rem 1rem; font-size:0.8rem; text-transform:uppercase; letter-spacing:0.05em; color:#7f8c8d; border-bottom:2px solid #e0e4e8; }
+.data-table td { padding:0.7rem 1rem; font-size:0.9rem; border-bottom:1px solid #f0f2f5; }
+.data-table tr:hover { background:#f8f9fa; }
+.data-table .actions { white-space:nowrap; }
+.msg-content { max-width:300px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+
+.badge { display:inline-block; padding:0.15rem 0.6rem; border-radius:10px; font-size:0.75rem; font-weight:600; }
+.badge-active { background:#e8f5e9; color:#2e7d32; }
+.badge-inactive { background:#ffebee; color:#c62828; }
+
+.pagination { display:flex; justify-content:center; align-items:center; gap:1rem; margin-top:1.5rem; }
+.pagination a { color:#4f6ef7; text-decoration:none; }
+
+h1 { font-size:1.4rem; margin-bottom:1rem; }
+h2 { font-size:1.1rem; margin-bottom:0.5rem; }
+
+.footer { text-align:center; padding:1rem; color:#7f8c8d; font-size:0.75rem; border-top:1px solid #e0e4e8; }

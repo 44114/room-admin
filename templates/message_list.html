@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% block title %}消息管理 - 管理面板{% endblock %}
+
+{% block content %}
+<h1>💬 消息管理 <span style="font-size:0.9rem;color:#7f8c8d">(共 {{ total }} 条)</span></h1>
+
+{% if messages %}
+<table class="data-table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>发送者</th>
+            <th>内容</th>
+            <th>房间</th>
+            <th>时间</th>
+            <th>操作</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for msg in messages %}
+        <tr>
+            <td>{{ msg.id }}</td>
+            <td>{{ msg.sender_name or '已注销' }}</td>
+            <td class="msg-content">{{ msg.content or '(文件)' }}</td>
+            <td>{{ msg.room }}</td>
+            <td>{{ msg.created_at.strftime('%m-%d %H:%M') if msg.created_at else '-' }}</td>
+            <td>
+                <form method="POST" action="/messages/{{ msg.id }}/delete" style="display:inline"
+                      onsubmit="return confirm('确定删除此消息？')">
+                    <button type="submit" class="btn-sm btn-danger">删除</button>
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<div class="pagination">
+    {% if page > 1 %}
+        <a href="/messages?page={{ page - 1 }}">上一页</a>
+    {% endif %}
+    <span>第 {{ page }} / {{ total_pages }} 页</span>
+    {% if page < total_pages %}
+        <a href="/messages?page={{ page + 1 }}">下一页</a>
+    {% endif %}
+</div>
+{% else %}
+<p>暂无消息。</p>
+{% endif %}
+
+<hr style="margin:2rem 0;">
+
+<h2>⚠️ 清空全部聊天记录</h2>
+<p style="color:#e74c3c;">此操作不可撤销。请输入确认短语后提交。</p>
+<form method="POST" action="/messages/clear" onsubmit="return confirm('此操作不可撤销！确定清空全部消息？')">
+    <input type="text" name="confirm" placeholder="DELETE ALL MESSAGES"
+           style="width:300px;padding:0.5rem;border:2px solid #e74c3c;border-radius:4px;" required>
+    <button type="submit" class="btn btn-danger" style="margin-left:0.5rem;">清空全部消息</button>
+</form>
+{% endblock %}

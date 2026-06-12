@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% block title %}用户管理 - 管理面板{% endblock %}
+
+{% block content %}
+<h1>👥 用户管理</h1>
+
+<table class="data-table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>用户名</th>
+            <th>状态</th>
+            <th>注册时间</th>
+            <th>操作</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for user in users %}
+        <tr>
+            <td>{{ user.id }}</td>
+            <td>{{ user.username }}</td>
+            <td>
+                {% if user.is_active %}
+                    <span class="badge badge-active">活跃</span>
+                {% else %}
+                    <span class="badge badge-inactive">已注销</span>
+                {% endif %}
+            </td>
+            <td>{{ user.created_at.strftime('%Y-%m-%d %H:%M') if user.created_at else '-' }}</td>
+            <td class="actions">
+                {% if user.is_active %}
+                <form method="POST" action="/users/{{ user.id }}/delete" style="display:inline"
+                      onsubmit="return confirm('确定禁用此用户？')">
+                    <button type="submit" class="btn-sm btn-danger">禁用</button>
+                </form>
+                <form method="POST" action="/users/{{ user.id }}/reset-password" style="display:inline"
+                      onsubmit="return confirm('确定重置此用户的密码？')">
+                    <button type="submit" class="btn-sm">重置密码</button>
+                </form>
+                {% else %}
+                <form method="POST" action="/users/{{ user.id }}/activate" style="display:inline"
+                      onsubmit="return confirm('确定恢复此用户？')">
+                    <button type="submit" class="btn-sm btn-success">恢复</button>
+                </form>
+                {% endif %}
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
