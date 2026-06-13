@@ -45,13 +45,30 @@ If remote access is needed, place Nginx in front with:
 
 ---
 
-## Quick Start
+## Installation
 
-### Prerequisites
+Two methods are available.
+
+### Method 1: Via Main Project's One-Click Script (Recommended)
+
+The [main Chat Room setup script](https://github.com/44114/room/blob/main/setup.sh) can install the admin panel alongside the chat server automatically:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/44114/room/main/setup.sh -o setup.sh
+sudo bash setup.sh
+```
+
+When prompted *"Also install the Admin Panel (room-admin)?"*, answer **Y**. The script handles everything: system dependencies, MySQL, venv, `.env` generation, and systemd service.
+
+---
+
+### Method 2: Manual Installation
+
+#### Prerequisites
 
 Same as the [main Chat Room server](https://github.com/44114/room): Python 3.10+, MySQL 8.0+/MariaDB 10.11+.
 
-### Installation
+#### Steps
 
 ```bash
 git clone https://github.com/44114/room-admin.git
@@ -61,7 +78,7 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-### Configuration
+#### Configuration
 
 ```bash
 cp .env.example .env
@@ -80,7 +97,7 @@ Required environment variables:
 | `MYSQL_PASSWORD` | MySQL password |
 | `SECRET_KEY` | Flask session signing key (run `python3 -c "import secrets; print(secrets.token_hex(64))"`) |
 
-### Run (local only)
+#### Run (local only)
 
 ```bash
 python app.py
