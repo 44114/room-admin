@@ -1,0 +1,151 @@
+{
+  "meta": {
+    "name": "Phasa Thai",
+    "code": "th"
+  },
+  "nav": {
+    "brand": "🛡️ แผงผูดูแลระบบ",
+    "dashboard": "แดชบอรด",
+    "users": "ผใชงาน",
+    "messages": "ขอความ",
+    "files": "ไฟล",
+    "logout": "ออกจากระบบ",
+    "language": "ภาษา"
+  },
+  "footer": {
+    "text": "แผงผูดูแลระบบหองสนทนา — สําหรับผูดูแลระบบเทานั้น"
+  },
+  "login": {
+    "title": "🔑 เขาสระบบผูดูแลระบบ",
+    "form": {
+      "username": "ชื่อผใชงาน",
+      "username_placeholder": "ชื่อผดูแลระบบ",
+      "password": "รหสผาน",
+      "password_placeholder": "รหสผานของผดูแลระบบ",
+      "submit": "เขาสระบบ"
+    }
+  },
+  "setup": {
+    "title": "🔐 การตังคาครงแรก",
+    "description": "ไมพบบัญชีผดูแลระบบ กรุณาสรางบัญชีผดูแลระบบ",
+    "form": {
+      "username": "ชื่อผดูแลระบบ",
+      "username_placeholder": "3-30 ตัวอักษร ตัวเลข หรือขีดลาง",
+      "password": "รหสผานผดูแลระบบ",
+      "password_placeholder": "อยางนอย 8 ตัวอักษร มีตัวอักษร 3 ชนิดขึนไป",
+      "password_confirm": "ยืนยันรหสผาน",
+      "password_confirm_placeholder": "กรอกรหสผานอีกครัง",
+      "submit": "สรางบัญชีผดูแลระบบ"
+    }
+  },
+  "dashboard": {
+    "title": "แดชบอรด",
+    "welcome": "ยินดีตอนรับ, {username}.",
+    "stats": {
+      "active_users": "ผใชงานทํางาน",
+      "deleted_users": "ผใชงานถูกลบ",
+      "total_messages": "ขอความทังหมด",
+      "total_files": "ไฟลทีอัปโหลด"
+    }
+  },
+  "users": {
+    "title": "การจัดการผใชงาน",
+    "table": {
+      "id": "ID",
+      "username": "ชื่อผใชงาน",
+      "status": "สถานะ",
+      "registered": "วันทีลงทะเบียน",
+      "actions": "การดําเนินการ"
+    },
+    "status": {
+      "active": "ทํางาน",
+      "deleted": "ถูกลบ"
+    },
+    "action": {
+      "disable": "ปิดการใชงาน",
+      "reset_password": "รีเซตรหสผาน",
+      "activate": "เปดการใชงาน"
+    },
+    "confirm": {
+      "disable": "คุณแนใจหรือไม่ตองการปิดการใชงานผใชงานนี?",
+      "reset_password": "คุณแนใจหรือไม่ตองการรีเซตรหสผานของผใชงานนี?",
+      "activate": "คุณแนใจหรือไม่ตองการเปดการใชงานผใชงานนีกคืน?"
+    }
+  },
+  "messages": {
+    "title": "การจัดการขอความ",
+    "total": "ขอความทังหมด {count} ขอความ",
+    "table": {
+      "id": "ID",
+      "sender": "ผสง",
+      "content": "เนื้อหา",
+      "room": "หอง",
+      "time": "เวลา",
+      "actions": "การดําเนินการ"
+    },
+    "sender_deleted": "ถูกลบ",
+    "content_file": "(ไฟล)",
+    "action": {
+      "delete": "ลบ"
+    },
+    "confirm": {
+      "delete_message": "คุณแนใจหรือไม่ตองการลบขอความนี?",
+      "clear_all": "การดําเนินการนีไมสามารถยอนกลับได! คุณแนใจหรือไม่ตองการลบขอความทังหมด?"
+    },
+    "pagination": {
+      "previous": "กอนหนา",
+      "page": "หนา {page} / {total}",
+      "next": "ถัดไป"
+    },
+    "no_messages": "ไมมีขอความ",
+    "clear": {
+      "title": "⚠️ ลบขอความทังหมด",
+      "warning": "การดําเนินการนีไมสามารถยอนกลบได กรุณาปอนวลียืนยันดานลาง",
+      "placeholder": "DELETE ALL MESSAGES",
+      "button": "ลบขอความทังหมด"
+    }
+  },
+  "files": {
+    "title": "รายการไฟล",
+    "table": {
+      "id": "ID",
+      "filename": "ชื่อไฟล",
+      "size": "ขนาด",
+      "type": "ประเภท",
+      "uploader": "ผูอัปโหลด",
+      "status": "สถานะ",
+      "time": "เวลา"
+    },
+    "status": {
+      "complete": "สมบูรณ",
+      "pending": "ไมสมบูรณ"
+    },
+    "uploader_deleted": "ถูกลบ",
+    "no_files": "ไมมีไฟล"
+  },
+  "error": {
+    "page_not_found": "ไมพบหนา",
+    "server_error": "ขอผิดพลาดของเซิรฟเวอร",
+    "admin_exists": "มีบัญชีผดูแลระบบอยแลว",
+    "setup_username": "ชื่อผใชงานตองมี 3-30 ตัวอักษร ตัวเลข หรือขีดลาง",
+    "password_mismatch": "รหสผานไมตรงกน",
+    "password_weak": "รหสผานตองอยางนอย 8 ตัวอักษรและมีอยางนอย 3 ชนิดจาก: ตัวพิมพ์ใหญ ตัวพิมพ์เล็ก ตัวเลข อักขระพิเศษ",
+    "login_required": "กรุณากรอกชื่อผใชงานและรหสผาน",
+    "login_invalid": "ชื่อผใชงานหรือรหสผานไมถูกตอง",
+    "user_not_found": "ไมพบผใชงาน",
+    "message_not_found": "ไมพบขอความ",
+    "operation_failed": "การดําเนินการลมเหลว: {error}",
+    "clear_confirmation": "กรุณาปอนวลียืนยัน 'DELETE ALL MESSAGES'",
+    "auth_required": "กรุณาเขาสระบบในฐานะผดูแลระบบกอน"
+  },
+  "success": {
+    "admin_created": "สรางบัญชีผดูแลระบบสําเรจ!",
+    "logout": "คุณไดออกจากระบบแลว",
+    "admin_exists": "บัญชีผดูแลระบบมอยแลว",
+    "user_disabled": "ผใชงาน #{id} ถกปดการใชงานแลว",
+    "user_activated": "ผใชงาน #{id} ถกเปดการใชงานอีกครง",
+    "password_reset": "รหสผานของผใชงาน #{id} ถกรเซตเปน: {pwd} (กรุณาแชรกบผใชงาน เขาตองเปลยนรหสผานเมอเขาสระบบครงตอไป)",
+    "message_deleted": "ขอความ #{id} ถกลบแลว",
+    "messages_cleared": "ลบขอความทงหมดแลว ({count} ขอความ)"
+  }
+}

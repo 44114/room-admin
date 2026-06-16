@@ -14,6 +14,7 @@ from config import Config
 from utils import hash_password, verify_password, is_strong_password
 from models import has_admin, create_admin, get_admin_by_username
 from middleware import admin_required
+from i18n import _
 
 logger = logging.getLogger(__name__)
 
@@ -27,7 +28,7 @@ auth_bp = Blueprint("auth", __name__, url_prefix="/auth")
 def setup_page():
     """First-run admin creation page. Only accessible when no admin exists."""
     if has_admin():
-        flash("管理员账号已存在。", "info")
+        flash(_("success.admin_exists"), "info")
         return redirect(url_for("auth.login_page"))
     return render_template("setup.html")
 
@@ -47,7 +48,7 @@ def login_page():
 def setup():
     """Handle first-run admin account creation."""
     if has_admin():
-        return {"error": "管理员账号已存在。"}, 403
+        return {"error": _("error.admin_exists")}, 403
 
     username = request.form.get("username", "").strip()
     password = request.form.get("password", "")
@@ -55,11 +56,11 @@ def setup():
 
     errors = []
     if not (3 <= len(username) <= 30 and username.replace("_", "").isalnum()):
-        errors.append("用户名需为3-30位字母、数字或下划线。")
+        errors.append(_("error.setup_username"))
     if password != password_confirm:
-        errors.append("两次输入的密码不一致。")
+        errors.append(_("error.password_mismatch"))
     if not is_strong_password(password):
-        errors.append("密码至少8位，含大写、小写、数字、特殊字符之三。")
+        errors.append(_("error.password_weak"))
 
     if errors:
         flash("；".join(errors), "error")
@@ -75,7 +76,7 @@ def setup():
     session.permanent = True
 
     logger.info("Admin account '%s' created.", username)
-    flash("管理员账号创建成功！", "success")
+    flash(_("success.admin_created"), "success")
     return redirect(url_for("admin.dashboard"))
 
 
@@ -89,7 +90,7 @@ def login():
     password = request.form.get("password", "")
 
     if not username or not password:
-        flash("请输入用户名和密码。", "error")
+        flash(_("error.login_required"), "error")
         return redirect(url_for("auth.login_page"))
 
     import time
@@ -99,11 +100,11 @@ def login():
     if not admin:
         # Dummy verification to mask timing
         verify_password(password, "$argon2id$v=19$m=65536,t=3,p=4$dummy$dummy")
-        flash("用户名或密码错误。", "error")
+        flash(_("error.login_invalid"), "error")
         return redirect(url_for("auth.login_page"))
 
     if not verify_password(password, admin["password_hash"]):
-        flash("用户名或密码错误。", "error")
+        flash(_("error.login_invalid"), "error")
         return redirect(url_for("auth.login_page"))
 
     session.clear()
@@ -120,5 +121,5 @@ def login():
 def logout():
     """Handle admin logout."""
     session.clear()
-    flash("已退出登录。", "info")
+    flash(_("success.logout"), "info")
     return redirect(url_for("auth.login_page"))

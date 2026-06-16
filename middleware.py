@@ -5,6 +5,7 @@ Security middleware: admin auth decorator, CSRF, headers.
 from functools import wraps
 
 from flask import session, redirect, url_for, flash
+from i18n import _
 
 
 def admin_required(f):
@@ -13,7 +14,7 @@ def admin_required(f):
     @wraps(f)
     def decorated(*args, **kwargs):
         if not session.get("admin_id"):
-            flash("请先登录管理员账号。", "warning")
+            flash(_("error.auth_required"), "warning")
             return redirect(url_for("auth.login_page"))
         return f(*args, **kwargs)
 

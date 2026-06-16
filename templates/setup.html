@@ -1,36 +1,36 @@
 {% extends "base.html" %}
-{% block title %}创建管理员 - 管理面板{% endblock %}
+{% block title %}{{ _('setup.title') }} - {{ _('nav.brand') }}{% endblock %}
 
 {% block content %}
 <div class="auth-container">
     <div class="auth-card">
-        <h1>🔐 首次设置</h1>
-        <p>数据库中尚无管理员账号。请创建管理员账户。</p>
+        <h1>{{ _('setup.title') }}</h1>
+        <p>{{ _('setup.description') }}</p>
 
         <form method="POST" class="auth-form">
             <div class="form-group">
-                <label for="username">管理员用户名</label>
+                <label for="username">{{ _('setup.form.username') }}</label>
                 <input type="text" id="username" name="username"
-                       placeholder="3-30位字母、数字或下划线"
+                       placeholder="{{ _('setup.form.username_placeholder') }}"
                        minlength="3" maxlength="30" pattern="[a-zA-Z0-9_]{3,30}"
                        required autofocus>
             </div>
 
             <div class="form-group">
-                <label for="password">管理员密码</label>
+                <label for="password">{{ _('setup.form.password') }}</label>
                 <input type="password" id="password" name="password"
-                       placeholder="至少8位，含大小写、数字、特殊字符"
+                       placeholder="{{ _('setup.form.password_placeholder') }}"
                        minlength="8" maxlength="128" required>
             </div>
 
             <div class="form-group">
-                <label for="password_confirm">确认密码</label>
+                <label for="password_confirm">{{ _('setup.form.password_confirm') }}</label>
                 <input type="password" id="password_confirm" name="password_confirm"
-                       placeholder="再次输入密码"
+                       placeholder="{{ _('setup.form.password_confirm_placeholder') }}"
                        minlength="8" maxlength="128" required>
             </div>
 
-            <button type="submit" class="btn">创建管理员账号</button>
+            <button type="submit" class="btn">{{ _('setup.form.submit') }}</button>
         </form>
     </div>
 </div>

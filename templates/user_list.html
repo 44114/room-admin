@@ -1,17 +1,17 @@
 {% extends "base.html" %}
-{% block title %}用户管理 - 管理面板{% endblock %}
+{% block title %}{{ _('users.title') }} - {{ _('nav.brand') }}{% endblock %}
 
 {% block content %}
-<h1>👥 用户管理</h1>
+<h1>👥 {{ _('users.title') }}</h1>
 
 <table class="data-table">
     <thead>
         <tr>
-            <th>ID</th>
-            <th>用户名</th>
-            <th>状态</th>
-            <th>注册时间</th>
-            <th>操作</th>
+            <th>{{ _('users.table.id') }}</th>
+            <th>{{ _('users.table.username') }}</th>
+            <th>{{ _('users.table.status') }}</th>
+            <th>{{ _('users.table.registered') }}</th>
+            <th>{{ _('users.table.actions') }}</th>
         </tr>
     </thead>
     <tbody>
@@ -21,26 +21,26 @@
             <td>{{ user.username }}</td>
             <td>
                 {% if user.is_active %}
-                    <span class="badge badge-active">活跃</span>
+                    <span class="badge badge-active">{{ _('users.status.active') }}</span>
                 {% else %}
-                    <span class="badge badge-inactive">已注销</span>
+                    <span class="badge badge-inactive">{{ _('users.status.deleted') }}</span>
                 {% endif %}
             </td>
             <td>{{ user.created_at.strftime('%Y-%m-%d %H:%M') if user.created_at else '-' }}</td>
             <td class="actions">
                 {% if user.is_active %}
                 <form method="POST" action="/users/{{ user.id }}/delete" style="display:inline"
-                      onsubmit="return confirm('确定禁用此用户？')">
-                    <button type="submit" class="btn-sm btn-danger">禁用</button>
+                      onsubmit="return confirm('{{ _('users.confirm.disable')|e }}')">
+                    <button type="submit" class="btn-sm btn-danger">{{ _('users.action.disable') }}</button>
                 </form>
                 <form method="POST" action="/users/{{ user.id }}/reset-password" style="display:inline"
-                      onsubmit="return confirm('确定重置此用户的密码？')">
-                    <button type="submit" class="btn-sm">重置密码</button>
+                      onsubmit="return confirm('{{ _('users.confirm.reset_password')|e }}')">
+                    <button type="submit" class="btn-sm">{{ _('users.action.reset_password') }}</button>
                 </form>
                 {% else %}
                 <form method="POST" action="/users/{{ user.id }}/activate" style="display:inline"
-                      onsubmit="return confirm('确定恢复此用户？')">
-                    <button type="submit" class="btn-sm btn-success">恢复</button>
+                      onsubmit="return confirm('{{ _('users.confirm.activate')|e }}')">
+                    <button type="submit" class="btn-sm btn-success">{{ _('users.action.activate') }}</button>
                 </form>
                 {% endif %}
             </td>

@@ -1,0 +1,151 @@
+{
+  "meta": {
+    "name": "Espanol",
+    "code": "es"
+  },
+  "nav": {
+    "brand": "🛡️ Panel de Administracion",
+    "dashboard": "Panel",
+    "users": "Usuarios",
+    "messages": "Mensajes",
+    "files": "Archivos",
+    "logout": "Cerrar sesion",
+    "language": "Idioma"
+  },
+  "footer": {
+    "text": "Panel de Administracion del Chat — Solo para administradores"
+  },
+  "login": {
+    "title": "🔑 Inicio de Sesion",
+    "form": {
+      "username": "Nombre de usuario",
+      "username_placeholder": "Usuario administrador",
+      "password": "Contrasena",
+      "password_placeholder": "Contrasena de administrador",
+      "submit": "Iniciar sesion"
+    }
+  },
+  "setup": {
+    "title": "🔐 Configuracion Inicial",
+    "description": "No se encontro ninguna cuenta de administrador. Cree una cuenta de administrador.",
+    "form": {
+      "username": "Nombre de administrador",
+      "username_placeholder": "3-30 letras, digitos o guiones bajos",
+      "password": "Contrasena de administrador",
+      "password_placeholder": "Al menos 8 caracteres con 3+ tipos de caracteres",
+      "password_confirm": "Confirmar contrasena",
+      "password_confirm_placeholder": "Vuelva a ingresar la contrasena",
+      "submit": "Crear cuenta de administrador"
+    }
+  },
+  "dashboard": {
+    "title": "Panel",
+    "welcome": "Bienvenido, {username}.",
+    "stats": {
+      "active_users": "Usuarios activos",
+      "deleted_users": "Usuarios eliminados",
+      "total_messages": "Mensajes totales",
+      "total_files": "Archivos subidos"
+    }
+  },
+  "users": {
+    "title": "Gestion de Usuarios",
+    "table": {
+      "id": "ID",
+      "username": "Usuario",
+      "status": "Estado",
+      "registered": "Registrado",
+      "actions": "Acciones"
+    },
+    "status": {
+      "active": "Activo",
+      "deleted": "Eliminado"
+    },
+    "action": {
+      "disable": "Deshabilitar",
+      "reset_password": "Restablecer contrasena",
+      "activate": "Activar"
+    },
+    "confirm": {
+      "disable": "Esta seguro de que desea deshabilitar a este usuario?",
+      "reset_password": "Esta seguro de que desea restablecer la contrasena de este usuario?",
+      "activate": "Esta seguro de que desea reactivar a este usuario?"
+    }
+  },
+  "messages": {
+    "title": "Gestion de Mensajes",
+    "total": "{count} mensajes en total",
+    "table": {
+      "id": "ID",
+      "sender": "Remitente",
+      "content": "Contenido",
+      "room": "Sala",
+      "time": "Hora",
+      "actions": "Acciones"
+    },
+    "sender_deleted": "Eliminado",
+    "content_file": "(Archivo)",
+    "action": {
+      "delete": "Eliminar"
+    },
+    "confirm": {
+      "delete_message": "Esta seguro de que desea eliminar este mensaje?",
+      "clear_all": "Esta accion no se puede deshacer. Esta seguro de que desea eliminar todos los mensajes?"
+    },
+    "pagination": {
+      "previous": "Anterior",
+      "page": "Pagina {page} / {total}",
+      "next": "Siguiente"
+    },
+    "no_messages": "No hay mensajes.",
+    "clear": {
+      "title": "⚠️ Borrar Todos los Mensajes",
+      "warning": "Esta accion no se puede deshacer. Ingrese la frase de confirmacion a continuacion.",
+      "placeholder": "DELETE ALL MESSAGES",
+      "button": "Borrar todos los mensajes"
+    }
+  },
+  "files": {
+    "title": "Lista de Archivos",
+    "table": {
+      "id": "ID",
+      "filename": "Nombre de archivo",
+      "size": "Tamano",
+      "type": "Tipo",
+      "uploader": "Subido por",
+      "status": "Estado",
+      "time": "Hora"
+    },
+    "status": {
+      "complete": "Completo",
+      "pending": "Incompleto"
+    },
+    "uploader_deleted": "Eliminado",
+    "no_files": "No hay archivos."
+  },
+  "error": {
+    "page_not_found": "Pagina no encontrada",
+    "server_error": "Error del servidor",
+    "admin_exists": "Ya existe una cuenta de administrador.",
+    "setup_username": "El nombre de usuario debe tener entre 3 y 30 letras, digitos o guiones bajos.",
+    "password_mismatch": "Las contrasenas no coinciden.",
+    "password_weak": "La contrasena debe tener al menos 8 caracteres e incluir al menos 3 de: mayusculas, minusculas, digitos, caracteres especiales.",
+    "login_required": "Ingrese su nombre de usuario y contrasena.",
+    "login_invalid": "Nombre de usuario o contrasena invalidos.",
+    "user_not_found": "Usuario no encontrado.",
+    "message_not_found": "Mensaje no encontrado.",
+    "operation_failed": "Operacion fallida: {error}",
+    "clear_confirmation": "Ingrese la frase de confirmacion 'DELETE ALL MESSAGES'.",
+    "auth_required": "Inicie sesion como administrador primero."
+  },
+  "success": {
+    "admin_created": "Cuenta de administrador creada exitosamente!",
+    "logout": "Ha cerrado sesion.",
+    "admin_exists": "La cuenta de administrador ya existe.",
+    "user_disabled": "El usuario #{id} ha sido deshabilitado.",
+    "user_activated": "El usuario #{id} ha sido reactivado.",
+    "password_reset": "La contrasena del usuario #{id} se ha restablecido a: {pwd} (compartala con el usuario, debe cambiarla en el proximo inicio de sesion)",
+    "message_deleted": "El mensaje #{id} ha sido eliminado.",
+    "messages_cleared": "Todos los mensajes han sido eliminados ({count} mensajes)."
+  }
+}

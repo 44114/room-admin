@@ -1,0 +1,151 @@
+{
+  "meta": {
+    "name": "简体中文",
+    "code": "zh-CN"
+  },
+  "nav": {
+    "brand": "🛡️ 管理面板",
+    "dashboard": "仪表盘",
+    "users": "用户管理",
+    "messages": "消息管理",
+    "files": "文件列表",
+    "logout": "退出",
+    "language": "语言"
+  },
+  "footer": {
+    "text": "Chat Room Admin Panel — 仅供管理员使用"
+  },
+  "login": {
+    "title": "🔑 管理员登录",
+    "form": {
+      "username": "用户名",
+      "username_placeholder": "管理员用户名",
+      "password": "密码",
+      "password_placeholder": "管理员密码",
+      "submit": "登录"
+    }
+  },
+  "setup": {
+    "title": "🔐 首次设置",
+    "description": "数据库中尚无管理员账号。请创建管理员账户。",
+    "form": {
+      "username": "管理员用户名",
+      "username_placeholder": "3-30位字母、数字或下划线",
+      "password": "管理员密码",
+      "password_placeholder": "至少8位，含大小写、数字、特殊字符",
+      "password_confirm": "确认密码",
+      "password_confirm_placeholder": "再次输入密码",
+      "submit": "创建管理员账号"
+    }
+  },
+  "dashboard": {
+    "title": "仪表盘",
+    "welcome": "欢迎，{username}。",
+    "stats": {
+      "active_users": "活跃用户",
+      "deleted_users": "已注销用户",
+      "total_messages": "消息总数",
+      "total_files": "上传文件"
+    }
+  },
+  "users": {
+    "title": "用户管理",
+    "table": {
+      "id": "ID",
+      "username": "用户名",
+      "status": "状态",
+      "registered": "注册时间",
+      "actions": "操作"
+    },
+    "status": {
+      "active": "活跃",
+      "deleted": "已注销"
+    },
+    "action": {
+      "disable": "禁用",
+      "reset_password": "重置密码",
+      "activate": "恢复"
+    },
+    "confirm": {
+      "disable": "确定禁用此用户？",
+      "reset_password": "确定重置此用户的密码？",
+      "activate": "确定恢复此用户？"
+    }
+  },
+  "messages": {
+    "title": "消息管理",
+    "total": "共 {count} 条",
+    "table": {
+      "id": "ID",
+      "sender": "发送者",
+      "content": "内容",
+      "room": "房间",
+      "time": "时间",
+      "actions": "操作"
+    },
+    "sender_deleted": "已注销",
+    "content_file": "(文件)",
+    "action": {
+      "delete": "删除"
+    },
+    "confirm": {
+      "delete_message": "确定删除此消息？",
+      "clear_all": "此操作不可撤销！确定清空全部消息？"
+    },
+    "pagination": {
+      "previous": "上一页",
+      "page": "第 {page} / {total} 页",
+      "next": "下一页"
+    },
+    "no_messages": "暂无消息。",
+    "clear": {
+      "title": "⚠️ 清空全部聊天记录",
+      "warning": "此操作不可撤销。请输入确认短语后提交。",
+      "placeholder": "DELETE ALL MESSAGES",
+      "button": "清空全部消息"
+    }
+  },
+  "files": {
+    "title": "文件列表",
+    "table": {
+      "id": "ID",
+      "filename": "文件名",
+      "size": "大小",
+      "type": "类型",
+      "uploader": "上传者",
+      "status": "状态",
+      "time": "时间"
+    },
+    "status": {
+      "complete": "完成",
+      "pending": "未完成"
+    },
+    "uploader_deleted": "已注销",
+    "no_files": "暂无文件。"
+  },
+  "error": {
+    "page_not_found": "页面不存在",
+    "server_error": "服务器错误",
+    "admin_exists": "管理员账号已存在。",
+    "setup_username": "用户名需为3-30位字母、数字或下划线。",
+    "password_mismatch": "两次输入的密码不一致。",
+    "password_weak": "密码至少8位，含大写、小写、数字、特殊字符之三。",
+    "login_required": "请输入用户名和密码。",
+    "login_invalid": "用户名或密码错误。",
+    "user_not_found": "用户不存在。",
+    "message_not_found": "消息不存在。",
+    "operation_failed": "操作失败：{error}",
+    "clear_confirmation": "请输入确认短语 'DELETE ALL MESSAGES' 以执行此操作。",
+    "auth_required": "请先登录管理员账号。"
+  },
+  "success": {
+    "admin_created": "管理员账号创建成功！",
+    "logout": "已退出登录。",
+    "admin_exists": "管理员账号已存在。",
+    "user_disabled": "用户 #{id} 已被禁用。",
+    "user_activated": "用户 #{id} 已恢复。",
+    "password_reset": "用户 #{id} 密码已重置为：{pwd} （请将此密码告知用户，登录后立即修改）",
+    "message_deleted": "消息 #{id} 已删除。",
+    "messages_cleared": "已清空全部聊天记录（{count} 条）。"
+  }
+}

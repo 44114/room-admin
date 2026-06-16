@@ -11,6 +11,7 @@ from flask import (
 
 from middleware import admin_required
 from utils import get_db
+from i18n import _
 
 logger = logging.getLogger(__name__)
 
@@ -89,12 +90,12 @@ def delete_user(user_id):
 
         if affected:
             logger.info("Admin deleted user %d.", user_id)
-            flash(f"用户 #{user_id} 已被禁用。", "success")
+            flash(_("success.user_disabled").format(id=user_id), "success")
         else:
-            flash("用户不存在。", "error")
+            flash(_("error.user_not_found"), "error")
     except Exception as e:
         conn.rollback()
-        flash(f"操作失败：{e}", "error")
+        flash(_("error.operation_failed").format(error=e), "error")
     finally:
         conn.close()
 
@@ -116,12 +117,12 @@ def activate_user(user_id):
         conn.commit()
 
         if affected:
-            flash(f"用户 #{user_id} 已恢复。", "success")
+            flash(_("success.user_activated").format(id=user_id), "success")
         else:
-            flash("用户不存在。", "error")
+            flash(_("error.user_not_found"), "error")
     except Exception as e:
         conn.rollback()
-        flash(f"操作失败：{e}", "error")
+        flash(_("error.operation_failed").format(error=e), "error")
     finally:
         conn.close()
 
@@ -150,15 +151,15 @@ def reset_user_password(user_id):
 
         if affected:
             flash(
-                f"用户 #{user_id} 密码已重置为：{new_pwd} （请将此密码告知用户，登录后立即修改）",
+                _("success.password_reset").format(id=user_id, pwd=new_pwd),
                 "success",
             )
             logger.info("Admin reset password for user %d.", user_id)
         else:
-            flash("用户不存在。", "error")
+            flash(_("error.user_not_found"), "error")
     except Exception as e:
         conn.rollback()
-        flash(f"操作失败：{e}", "error")
+        flash(_("error.operation_failed").format(error=e), "error")
     finally:
         conn.close()
 
@@ -218,12 +219,12 @@ def delete_message(msg_id):
         conn.commit()
 
         if affected:
-            flash(f"消息 #{msg_id} 已删除。", "success")
+            flash(_("success.message_deleted").format(id=msg_id), "success")
         else:
-            flash("消息不存在。", "error")
+            flash(_("error.message_not_found"), "error")
     except Exception as e:
         conn.rollback()
-        flash(f"操作失败：{e}", "error")
+        flash(_("error.operation_failed").format(error=e), "error")
     finally:
         conn.close()
 
@@ -236,7 +237,7 @@ def clear_messages():
     """Delete ALL messages (dangerous — requires confirmation)."""
     confirmation = request.form.get("confirm", "")
     if confirmation != "DELETE ALL MESSAGES":
-        flash("请输入确认短语 'DELETE ALL MESSAGES' 以执行此操作。", "error")
+        flash(_("error.clear_confirmation"), "error")
         return redirect(url_for("admin.message_list"))
 
     conn = get_db()
@@ -246,11 +247,11 @@ def clear_messages():
             deleted = cur.rowcount
         conn.commit()
 
-        flash(f"已清空全部聊天记录（{deleted} 条）。", "success")
+        flash(_("success.messages_cleared").format(count=deleted), "success")
         logger.warning("Admin cleared all %d messages.", deleted)
     except Exception as e:
         conn.rollback()
-        flash(f"操作失败：{e}", "error")
+        flash(_("error.operation_failed").format(error=e), "error")
     finally:
         conn.close()
 

@@ -1,0 +1,151 @@
+{
+  "meta": {
+    "name": "한국어",
+    "code": "ko"
+  },
+  "nav": {
+    "brand": "🛡️ 관리자 패널",
+    "dashboard": "대시보드",
+    "users": "사용자",
+    "messages": "메시지",
+    "files": "파일",
+    "logout": "로그아웃",
+    "language": "언어"
+  },
+  "footer": {
+    "text": "채팅방 관리자 패널 — 관리자 전용"
+  },
+  "login": {
+    "title": "🔑 관리자 로그인",
+    "form": {
+      "username": "사용자명",
+      "username_placeholder": "관리자 사용자명",
+      "password": "비밀번호",
+      "password_placeholder": "관리자 비밀번호",
+      "submit": "로그인"
+    }
+  },
+  "setup": {
+    "title": "🔐 최초 설정",
+    "description": "관리자 계정이 없습니다. 관리자 계정을 생성해 주세요.",
+    "form": {
+      "username": "관리자 사용자명",
+      "username_placeholder": "3~30자의 영문, 숫자 또는 밑줄",
+      "password": "관리자 비밀번호",
+      "password_placeholder": "8자 이상, 3가지 이상의 문자 유형 포함",
+      "password_confirm": "비밀번호 확인",
+      "password_confirm_placeholder": "비밀번호 재입력",
+      "submit": "관리자 계정 생성"
+    }
+  },
+  "dashboard": {
+    "title": "대시보드",
+    "welcome": "{username}님, 환영합니다.",
+    "stats": {
+      "active_users": "활성 사용자",
+      "deleted_users": "삭제된 사용자",
+      "total_messages": "전체 메시지",
+      "total_files": "업로드된 파일"
+    }
+  },
+  "users": {
+    "title": "사용자 관리",
+    "table": {
+      "id": "ID",
+      "username": "사용자명",
+      "status": "상태",
+      "registered": "등록일",
+      "actions": "작업"
+    },
+    "status": {
+      "active": "활성",
+      "deleted": "삭제됨"
+    },
+    "action": {
+      "disable": "비활성화",
+      "reset_password": "비밀번호 재설정",
+      "activate": "활성화"
+    },
+    "confirm": {
+      "disable": "이 사용자를 비활성화하시겠습니까?",
+      "reset_password": "이 사용자의 비밀번호를 재설정하시겠습니까?",
+      "activate": "이 사용자를 다시 활성화하시겠습니까?"
+    }
+  },
+  "messages": {
+    "title": "메시지 관리",
+    "total": "총 {count}개 메시지",
+    "table": {
+      "id": "ID",
+      "sender": "보낸 사람",
+      "content": "내용",
+      "room": "방",
+      "time": "시간",
+      "actions": "작업"
+    },
+    "sender_deleted": "삭제됨",
+    "content_file": "(파일)",
+    "action": {
+      "delete": "삭제"
+    },
+    "confirm": {
+      "delete_message": "이 메시지를 삭제하시겠습니까?",
+      "clear_all": "이 작업은 되돌릴 수 없습니다! 모든 메시지를 삭제하시겠습니까?"
+    },
+    "pagination": {
+      "previous": "이전",
+      "page": "{page} / {total} 페이지",
+      "next": "다음"
+    },
+    "no_messages": "메시지가 없습니다.",
+    "clear": {
+      "title": "⚠️ 모든 메시지 지우기",
+      "warning": "이 작업은 되돌릴 수 없습니다. 아래에 확인 문구를 입력하세요.",
+      "placeholder": "DELETE ALL MESSAGES",
+      "button": "모든 메시지 지우기"
+    }
+  },
+  "files": {
+    "title": "파일 목록",
+    "table": {
+      "id": "ID",
+      "filename": "파일명",
+      "size": "크기",
+      "type": "유형",
+      "uploader": "업로더",
+      "status": "상태",
+      "time": "시간"
+    },
+    "status": {
+      "complete": "완료",
+      "pending": "미완료"
+    },
+    "uploader_deleted": "삭제됨",
+    "no_files": "파일이 없습니다."
+  },
+  "error": {
+    "page_not_found": "페이지를 찾을 수 없습니다",
+    "server_error": "서버 오류",
+    "admin_exists": "관리자 계정이 이미 존재합니다.",
+    "setup_username": "사용자명은 3~30자의 영문, 숫자 또는 밑줄이어야 합니다.",
+    "password_mismatch": "비밀번호가 일치하지 않습니다.",
+    "password_weak": "비밀번호는 8자 이상이어야 하며 대문자, 소문자, 숫자, 특수 문자 중 최소 3가지를 포함해야 합니다.",
+    "login_required": "사용자명과 비밀번호를 입력해 주세요.",
+    "login_invalid": "사용자명 또는 비밀번호가 잘못되었습니다.",
+    "user_not_found": "사용자를 찾을 수 없습니다.",
+    "message_not_found": "메시지를 찾을 수 없습니다.",
+    "operation_failed": "작업 실패: {error}",
+    "clear_confirmation": "확인 문구 'DELETE ALL MESSAGES'를 입력해 주세요.",
+    "auth_required": "먼저 관리자로 로그인해 주세요."
+  },
+  "success": {
+    "admin_created": "관리자 계정이 생성되었습니다!",
+    "logout": "로그아웃되었습니다.",
+    "admin_exists": "관리자 계정이 이미 존재합니다.",
+    "user_disabled": "사용자 #{id}이(가) 비활성화되었습니다.",
+    "user_activated": "사용자 #{id}이(가) 다시 활성화되었습니다.",
+    "password_reset": "사용자 #{id}의 비밀번호가 다음으로 재설정되었습니다: {pwd} (사용자와 공유해 주세요. 다음 로그인 시 변경해야 합니다)",
+    "message_deleted": "메시지 #{id}이(가) 삭제되었습니다.",
+    "messages_cleared": "모든 메시지가 삭제되었습니다({count}개)."
+  }
+}

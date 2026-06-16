@@ -1,0 +1,151 @@
+{
+  "meta": {
+    "name": "Francais",
+    "code": "fr"
+  },
+  "nav": {
+    "brand": "🛡️ Panneau d'Administration",
+    "dashboard": "Tableau de bord",
+    "users": "Utilisateurs",
+    "messages": "Messages",
+    "files": "Fichiers",
+    "logout": "Deconnexion",
+    "language": "Langue"
+  },
+  "footer": {
+    "text": "Panneau d'administration du salon de discussion — Reserve aux administrateurs"
+  },
+  "login": {
+    "title": "🔑 Connexion Administrateur",
+    "form": {
+      "username": "Nom d'utilisateur",
+      "username_placeholder": "Nom d'utilisateur admin",
+      "password": "Mot de passe",
+      "password_placeholder": "Mot de passe admin",
+      "submit": "Connexion"
+    }
+  },
+  "setup": {
+    "title": "🔐 Configuration Initiale",
+    "description": "Aucun compte administrateur trouve. Veuillez creer un compte administrateur.",
+    "form": {
+      "username": "Nom d'utilisateur admin",
+      "username_placeholder": "3 a 30 lettres, chiffres ou underscores",
+      "password": "Mot de passe admin",
+      "password_placeholder": "Au moins 8 caracteres avec 3+ types de caracteres",
+      "password_confirm": "Confirmer le mot de passe",
+      "password_confirm_placeholder": "Resaisir le mot de passe",
+      "submit": "Creer un compte administrateur"
+    }
+  },
+  "dashboard": {
+    "title": "Tableau de bord",
+    "welcome": "Bienvenue, {username}.",
+    "stats": {
+      "active_users": "Utilisateurs actifs",
+      "deleted_users": "Utilisateurs supprimes",
+      "total_messages": "Messages totaux",
+      "total_files": "Fichiers telecharges"
+    }
+  },
+  "users": {
+    "title": "Gestion des Utilisateurs",
+    "table": {
+      "id": "ID",
+      "username": "Utilisateur",
+      "status": "Statut",
+      "registered": "Inscription",
+      "actions": "Actions"
+    },
+    "status": {
+      "active": "Actif",
+      "deleted": "Supprime"
+    },
+    "action": {
+      "disable": "Desactiver",
+      "reset_password": "Reinitialiser le mot de passe",
+      "activate": "Activer"
+    },
+    "confirm": {
+      "disable": "Etes-vous sur de vouloir desactiver cet utilisateur?",
+      "reset_password": "Etes-vous sur de vouloir reinitialiser le mot de passe de cet utilisateur?",
+      "activate": "Etes-vous sur de vouloir reactiver cet utilisateur?"
+    }
+  },
+  "messages": {
+    "title": "Gestion des Messages",
+    "total": "{count} messages au total",
+    "table": {
+      "id": "ID",
+      "sender": "Expediteur",
+      "content": "Contenu",
+      "room": "Salon",
+      "time": "Heure",
+      "actions": "Actions"
+    },
+    "sender_deleted": "Supprime",
+    "content_file": "(Fichier)",
+    "action": {
+      "delete": "Supprimer"
+    },
+    "confirm": {
+      "delete_message": "Etes-vous sur de vouloir supprimer ce message?",
+      "clear_all": "Cette action est irreversible! Etes-vous sur de vouloir effacer tous les messages?"
+    },
+    "pagination": {
+      "previous": "Precedent",
+      "page": "Page {page} / {total}",
+      "next": "Suivant"
+    },
+    "no_messages": "Aucun message.",
+    "clear": {
+      "title": "⚠️ Effacer Tous les Messages",
+      "warning": "Cette action est irreversible. Saisissez la phrase de confirmation ci-dessous.",
+      "placeholder": "DELETE ALL MESSAGES",
+      "button": "Effacer tous les messages"
+    }
+  },
+  "files": {
+    "title": "Liste des Fichiers",
+    "table": {
+      "id": "ID",
+      "filename": "Nom du fichier",
+      "size": "Taille",
+      "type": "Type",
+      "uploader": "Telechargeur",
+      "status": "Statut",
+      "time": "Heure"
+    },
+    "status": {
+      "complete": "Termine",
+      "pending": "Incomplet"
+    },
+    "uploader_deleted": "Supprime",
+    "no_files": "Aucun fichier."
+  },
+  "error": {
+    "page_not_found": "Page non trouvee",
+    "server_error": "Erreur du serveur",
+    "admin_exists": "Un compte administrateur existe deja.",
+    "setup_username": "Le nom d'utilisateur doit comporter 3 a 30 lettres, chiffres ou underscores.",
+    "password_mismatch": "Les mots de passe ne correspondent pas.",
+    "password_weak": "Le mot de passe doit comporter au moins 8 caracteres avec au moins 3 des elements suivants: majuscules, minuscules, chiffres, caracteres speciaux.",
+    "login_required": "Veuillez saisir votre nom d'utilisateur et votre mot de passe.",
+    "login_invalid": "Nom d'utilisateur ou mot de passe invalide.",
+    "user_not_found": "Utilisateur introuvable.",
+    "message_not_found": "Message introuvable.",
+    "operation_failed": "Echec de l'operation: {error}",
+    "clear_confirmation": "Veuillez saisir la phrase de confirmation 'DELETE ALL MESSAGES'.",
+    "auth_required": "Veuillez d'abord vous connecter en tant qu'administrateur."
+  },
+  "success": {
+    "admin_created": "Compte administrateur cree avec succes!",
+    "logout": "Vous avez ete deconnecte.",
+    "admin_exists": "Le compte administrateur existe deja.",
+    "user_disabled": "L'utilisateur #{id} a ete desactive.",
+    "user_activated": "L'utilisateur #{id} a ete reactive.",
+    "password_reset": "Le mot de passe de l'utilisateur #{id} a ete reinitialise a: {pwd} (partagez-le avec l'utilisateur, il doit le changer lors de la prochaine connexion)",
+    "message_deleted": "Le message #{id} a ete supprime.",
+    "messages_cleared": "Tous les messages ont ete effaces ({count} messages)."
+  }
+}

@@ -23,6 +23,7 @@ from models import init_db, has_admin
 from middleware import setup_security_headers, admin_required
 from auth import auth_bp
 from admin import admin_bp
+from i18n import init_i18n, _
 
 logging.basicConfig(
     level=logging.INFO,
@@ -45,6 +46,9 @@ def create_app() -> Flask:
     # Security
     setup_security_headers(app)
 
+    # Internationalization
+    init_i18n(app)
+
     # Blueprints
     app.register_blueprint(auth_bp)
     app.register_blueprint(admin_bp)
@@ -61,11 +65,11 @@ def create_app() -> Flask:
 
     @app.errorhandler(404)
     def not_found(e):
-        return "<h1>404</h1><p>页面不存在</p>", 404
+        return f"<h1>404</h1><p>{_('error.page_not_found')}</p>", 404
 
     @app.errorhandler(500)
     def server_error(e):
-        return "<h1>500</h1><p>服务器错误</p>", 500
+        return f"<h1>500</h1><p>{_('error.server_error')}</p>", 500
 
     return app
 

@@ -1,20 +1,20 @@
 {% extends "base.html" %}
-{% block title %}文件列表 - 管理面板{% endblock %}
+{% block title %}{{ _('files.title') }} - {{ _('nav.brand') }}{% endblock %}
 
 {% block content %}
-<h1>📁 文件列表</h1>
+<h1>📁 {{ _('files.title') }}</h1>
 
 {% if files %}
 <table class="data-table">
     <thead>
         <tr>
-            <th>ID</th>
-            <th>文件名</th>
-            <th>大小</th>
-            <th>类型</th>
-            <th>上传者</th>
-            <th>状态</th>
-            <th>时间</th>
+            <th>{{ _('files.table.id') }}</th>
+            <th>{{ _('files.table.filename') }}</th>
+            <th>{{ _('files.table.size') }}</th>
+            <th>{{ _('files.table.type') }}</th>
+            <th>{{ _('files.table.uploader') }}</th>
+            <th>{{ _('files.table.status') }}</th>
+            <th>{{ _('files.table.time') }}</th>
         </tr>
     </thead>
     <tbody>
@@ -24,12 +24,12 @@
             <td title="{{ f.filename }}">{{ f.filename[:50] }}{% if f.filename|length > 50 %}...{% endif %}</td>
             <td>{{ "%.1f"|format(f.file_size / 1024 / 1024) if f.file_size else 0 }} MB</td>
             <td>{{ f.mime_type or '-' }}</td>
-            <td>{{ f.uploader_name or '已注销' }}</td>
+            <td>{{ f.uploader_name or _('files.uploader_deleted') }}</td>
             <td>
                 {% if f.upload_complete %}
-                    <span class="badge badge-active">完成</span>
+                    <span class="badge badge-active">{{ _('files.status.complete') }}</span>
                 {% else %}
-                    <span class="badge badge-inactive">未完成</span>
+                    <span class="badge badge-inactive">{{ _('files.status.pending') }}</span>
                 {% endif %}
             </td>
             <td>{{ f.created_at.strftime('%Y-%m-%d %H:%M') if f.created_at else '-' }}</td>
@@ -38,6 +38,6 @@
     </tbody>
 </table>
 {% else %}
-<p>暂无文件。</p>
+<p>{{ _('files.no_files') }}</p>
 {% endif %}
 {% endblock %}

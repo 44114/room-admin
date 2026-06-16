@@ -1,0 +1,151 @@
+{
+  "meta": {
+    "name": "日本語",
+    "code": "ja"
+  },
+  "nav": {
+    "brand": "🛡️ 管理パネル",
+    "dashboard": "ダッシュボード",
+    "users": "ユーザー",
+    "messages": "メッセージ",
+    "files": "ファイル",
+    "logout": "ログアウト",
+    "language": "言語"
+  },
+  "footer": {
+    "text": "チャットルーム管理パネル — 管理者専用"
+  },
+  "login": {
+    "title": "🔑 管理者ログイン",
+    "form": {
+      "username": "ユーザー名",
+      "username_placeholder": "管理者ユーザー名",
+      "password": "パスワード",
+      "password_placeholder": "管理者パスワード",
+      "submit": "ログイン"
+    }
+  },
+  "setup": {
+    "title": "🔐 初回セットアップ",
+    "description": "管理者アカウントが見つかりません。管理者アカウントを作成してください。",
+    "form": {
+      "username": "管理者ユーザー名",
+      "username_placeholder": "3〜30文字の英字・数字・アンダースコア",
+      "password": "管理者パスワード",
+      "password_placeholder": "8文字以上、3種類以上の文字種を含む",
+      "password_confirm": "パスワード確認",
+      "password_confirm_placeholder": "パスワードを再入力",
+      "submit": "管理者アカウント作成"
+    }
+  },
+  "dashboard": {
+    "title": "ダッシュボード",
+    "welcome": "ようこそ、{username} さん。",
+    "stats": {
+      "active_users": "アクティブユーザー",
+      "deleted_users": "削除済みユーザー",
+      "total_messages": "総メッセージ数",
+      "total_files": "アップロードファイル数"
+    }
+  },
+  "users": {
+    "title": "ユーザー管理",
+    "table": {
+      "id": "ID",
+      "username": "ユーザー名",
+      "status": "ステータス",
+      "registered": "登録日",
+      "actions": "操作"
+    },
+    "status": {
+      "active": "アクティブ",
+      "deleted": "削除済み"
+    },
+    "action": {
+      "disable": "無効化",
+      "reset_password": "パスワードリセット",
+      "activate": "有効化"
+    },
+    "confirm": {
+      "disable": "このユーザーを無効にしてもよろしいですか？",
+      "reset_password": "このユーザーのパスワードをリセットしてもよろしいですか？",
+      "activate": "このユーザーを再有効化してもよろしいですか？"
+    }
+  },
+  "messages": {
+    "title": "メッセージ管理",
+    "total": "全{count}件のメッセージ",
+    "table": {
+      "id": "ID",
+      "sender": "送信者",
+      "content": "内容",
+      "room": "ルーム",
+      "time": "時刻",
+      "actions": "操作"
+    },
+    "sender_deleted": "削除済み",
+    "content_file": "(ファイル)",
+    "action": {
+      "delete": "削除"
+    },
+    "confirm": {
+      "delete_message": "このメッセージを削除してもよろしいですか？",
+      "clear_all": "この操作は元に戻せません！すべてのメッセージを削除してもよろしいですか？"
+    },
+    "pagination": {
+      "previous": "前へ",
+      "page": "{page} / {total} ページ",
+      "next": "次へ"
+    },
+    "no_messages": "メッセージはありません。",
+    "clear": {
+      "title": "⚠️ 全メッセージ削除",
+      "warning": "この操作は元に戻せません。確認フレーズを入力してください。",
+      "placeholder": "DELETE ALL MESSAGES",
+      "button": "全メッセージ削除"
+    }
+  },
+  "files": {
+    "title": "ファイル一覧",
+    "table": {
+      "id": "ID",
+      "filename": "ファイル名",
+      "size": "サイズ",
+      "type": "種類",
+      "uploader": "アップロード者",
+      "status": "ステータス",
+      "time": "時刻"
+    },
+    "status": {
+      "complete": "完了",
+      "pending": "未完了"
+    },
+    "uploader_deleted": "削除済み",
+    "no_files": "ファイルはありません。"
+  },
+  "error": {
+    "page_not_found": "ページが見つかりません",
+    "server_error": "サーバーエラー",
+    "admin_exists": "管理者アカウントは既に存在します。",
+    "setup_username": "ユーザー名は3〜30文字の英字・数字・アンダースコアで入力してください。",
+    "password_mismatch": "パスワードが一致しません。",
+    "password_weak": "パスワードは8文字以上で、大文字・小文字・数字・特殊文字のうち少なくとも3種類を含む必要があります。",
+    "login_required": "ユーザー名とパスワードを入力してください。",
+    "login_invalid": "ユーザー名またはパスワードが無効です。",
+    "user_not_found": "ユーザーが見つかりません。",
+    "message_not_found": "メッセージが見つかりません。",
+    "operation_failed": "操作に失敗しました: {error}",
+    "clear_confirmation": "確認フレーズ 'DELETE ALL MESSAGES' を入力してください。",
+    "auth_required": "先に管理者としてログインしてください。"
+  },
+  "success": {
+    "admin_created": "管理者アカウントを作成しました！",
+    "logout": "ログアウトしました。",
+    "admin_exists": "管理者アカウントは既に存在します。",
+    "user_disabled": "ユーザー #{id} を無効にしました。",
+    "user_activated": "ユーザー #{id} を再有効化しました。",
+    "password_reset": "ユーザー #{id} のパスワードをリセットしました: {pwd} （ユーザーと共有してください。次回ログイン時に変更が必要です）",
+    "message_deleted": "メッセージ #{id} を削除しました。",
+    "messages_cleared": "すべてのメッセージを削除しました（{count} 件）。"
+  }
+}

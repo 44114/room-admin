@@ -1,0 +1,151 @@
+{
+  "meta": {
+    "name": "Portugues",
+    "code": "pt"
+  },
+  "nav": {
+    "brand": "🛡️ Painel de Administracao",
+    "dashboard": "Painel",
+    "users": "Usuarios",
+    "messages": "Mensagens",
+    "files": "Arquivos",
+    "logout": "Sair",
+    "language": "Idioma"
+  },
+  "footer": {
+    "text": "Painel de Administracao da Sala de Chat — Apenas para administradores"
+  },
+  "login": {
+    "title": "🔑 Login do Administrador",
+    "form": {
+      "username": "Nome de usuario",
+      "username_placeholder": "Usuario administrador",
+      "password": "Senha",
+      "password_placeholder": "Senha do administrador",
+      "submit": "Entrar"
+    }
+  },
+  "setup": {
+    "title": "🔐 Configuracao Inicial",
+    "description": "Nenhuma conta de administrador encontrada. Crie uma conta de administrador.",
+    "form": {
+      "username": "Nome de administrador",
+      "username_placeholder": "3 a 30 letras, digitos ou sublinhados",
+      "password": "Senha do administrador",
+      "password_placeholder": "Pelo menos 8 caracteres com 3+ tipos de caracteres",
+      "password_confirm": "Confirmar senha",
+      "password_confirm_placeholder": "Redigite a senha",
+      "submit": "Criar conta de administrador"
+    }
+  },
+  "dashboard": {
+    "title": "Painel",
+    "welcome": "Bem-vindo, {username}.",
+    "stats": {
+      "active_users": "Usuarios ativos",
+      "deleted_users": "Usuarios excluidos",
+      "total_messages": "Total de mensagens",
+      "total_files": "Arquivos enviados"
+    }
+  },
+  "users": {
+    "title": "Gerenciamento de Usuarios",
+    "table": {
+      "id": "ID",
+      "username": "Usuario",
+      "status": "Status",
+      "registered": "Registrado em",
+      "actions": "Acoes"
+    },
+    "status": {
+      "active": "Ativo",
+      "deleted": "Excluido"
+    },
+    "action": {
+      "disable": "Desativar",
+      "reset_password": "Redefinir senha",
+      "activate": "Ativar"
+    },
+    "confirm": {
+      "disable": "Tem certeza de que deseja desativar este usuario?",
+      "reset_password": "Tem certeza de que deseja redefinir a senha deste usuario?",
+      "activate": "Tem certeza de que deseja reativar este usuario?"
+    }
+  },
+  "messages": {
+    "title": "Gerenciamento de Mensagens",
+    "total": "{count} mensagens no total",
+    "table": {
+      "id": "ID",
+      "sender": "Remetente",
+      "content": "Conteudo",
+      "room": "Sala",
+      "time": "Horario",
+      "actions": "Acoes"
+    },
+    "sender_deleted": "Excluido",
+    "content_file": "(Arquivo)",
+    "action": {
+      "delete": "Excluir"
+    },
+    "confirm": {
+      "delete_message": "Tem certeza de que deseja excluir esta mensagem?",
+      "clear_all": "Esta acao nao pode ser desfeita! Tem certeza de que deseja limpar todas as mensagens?"
+    },
+    "pagination": {
+      "previous": "Anterior",
+      "page": "Pagina {page} / {total}",
+      "next": "Proximo"
+    },
+    "no_messages": "Nenhuma mensagem.",
+    "clear": {
+      "title": "⚠️ Limpar Todas as Mensagens",
+      "warning": "Esta acao nao pode ser desfeita. Digite a frase de confirmacao abaixo.",
+      "placeholder": "DELETE ALL MESSAGES",
+      "button": "Limpar todas as mensagens"
+    }
+  },
+  "files": {
+    "title": "Lista de Arquivos",
+    "table": {
+      "id": "ID",
+      "filename": "Nome do arquivo",
+      "size": "Tamanho",
+      "type": "Tipo",
+      "uploader": "Enviado por",
+      "status": "Status",
+      "time": "Horario"
+    },
+    "status": {
+      "complete": "Completo",
+      "pending": "Incompleto"
+    },
+    "uploader_deleted": "Excluido",
+    "no_files": "Nenhum arquivo."
+  },
+  "error": {
+    "page_not_found": "Pagina nao encontrada",
+    "server_error": "Erro do servidor",
+    "admin_exists": "Ja existe uma conta de administrador.",
+    "setup_username": "O nome de usuario deve ter de 3 a 30 letras, digitos ou sublinhados.",
+    "password_mismatch": "As senhas nao coincidem.",
+    "password_weak": "A senha deve ter pelo menos 8 caracteres com pelo menos 3 dos seguintes: maiusculas, minusculas, digitos, caracteres especiais.",
+    "login_required": "Por favor, insira seu nome de usuario e senha.",
+    "login_invalid": "Nome de usuario ou senha invalidos.",
+    "user_not_found": "Usuario nao encontrado.",
+    "message_not_found": "Mensagem nao encontrada.",
+    "operation_failed": "Operacao falhou: {error}",
+    "clear_confirmation": "Por favor, insira a frase de confirmacao 'DELETE ALL MESSAGES'.",
+    "auth_required": "Por favor, faca login como administrador primeiro."
+  },
+  "success": {
+    "admin_created": "Conta de administrador criada com sucesso!",
+    "logout": "Voce saiu do sistema.",
+    "admin_exists": "A conta de administrador ja existe.",
+    "user_disabled": "O usuario #{id} foi desativado.",
+    "user_activated": "O usuario #{id} foi reativado.",
+    "password_reset": "A senha do usuario #{id} foi redefinida para: {pwd} (compartilhe com o usuario, ele deve altera-la no proximo login)",
+    "message_deleted": "A mensagem #{id} foi excluida.",
+    "messages_cleared": "Todas as mensagens foram limpas ({count} mensagens)."
+  }
+}

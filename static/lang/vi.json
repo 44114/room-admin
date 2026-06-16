@@ -1,0 +1,151 @@
+{
+  "meta": {
+    "name": "Tieng Viet",
+    "code": "vi"
+  },
+  "nav": {
+    "brand": "🛡️ Bang Quan Tri",
+    "dashboard": "Bang dieu khien",
+    "users": "Nguoi dung",
+    "messages": "Tin nhan",
+    "files": "Tep tin",
+    "logout": "Dang xuat",
+    "language": "Ngon ngu"
+  },
+  "footer": {
+    "text": "Bang quan tri phong chat — Chi danh cho quan tri vien"
+  },
+  "login": {
+    "title": "🔑 Dang Nhap Quan Tri",
+    "form": {
+      "username": "Ten dang nhap",
+      "username_placeholder": "Ten quan tri vien",
+      "password": "Mat khau",
+      "password_placeholder": "Mat khau quan tri vien",
+      "submit": "Dang nhap"
+    }
+  },
+  "setup": {
+    "title": "🔐 Thiet Lap Lan Dau",
+    "description": "Khong tim thay tai khoan quan tri. Vui long tao tai khoan quan tri.",
+    "form": {
+      "username": "Ten quan tri vien",
+      "username_placeholder": "3-30 ky tu chu, so hoac gach duoi",
+      "password": "Mat khau quan tri vien",
+      "password_placeholder": "It nhat 8 ky tu voi 3+ loai ky tu",
+      "password_confirm": "Xac nhan mat khau",
+      "password_confirm_placeholder": "Nhap lai mat khau",
+      "submit": "Tao tai khoan quan tri"
+    }
+  },
+  "dashboard": {
+    "title": "Bang dieu khien",
+    "welcome": "Chao mung, {username}.",
+    "stats": {
+      "active_users": "Nguoi dung hoat dong",
+      "deleted_users": "Nguoi dung da xoa",
+      "total_messages": "Tong so tin nhan",
+      "total_files": "Tep tin da tai len"
+    }
+  },
+  "users": {
+    "title": "Quan Ly Nguoi Dung",
+    "table": {
+      "id": "ID",
+      "username": "Ten nguoi dung",
+      "status": "Trang thai",
+      "registered": "Ngay dang ky",
+      "actions": "Thao tac"
+    },
+    "status": {
+      "active": "Hoat dong",
+      "deleted": "Da xoa"
+    },
+    "action": {
+      "disable": "Vo hieu hoa",
+      "reset_password": "Dat lai mat khau",
+      "activate": "Kich hoat"
+    },
+    "confirm": {
+      "disable": "Ban co chac chan muon vo hieu hoa nguoi dung nay?",
+      "reset_password": "Ban co chac chan muon dat lai mat khau cua nguoi dung nay?",
+      "activate": "Ban co chac chan muon kich hoat lai nguoi dung nay?"
+    }
+  },
+  "messages": {
+    "title": "Quan Ly Tin Nhan",
+    "total": "Tong cong {count} tin nhan",
+    "table": {
+      "id": "ID",
+      "sender": "Nguoi gui",
+      "content": "Noi dung",
+      "room": "Phong",
+      "time": "Thoi gian",
+      "actions": "Thao tac"
+    },
+    "sender_deleted": "Da xoa",
+    "content_file": "(Tep)",
+    "action": {
+      "delete": "Xoa"
+    },
+    "confirm": {
+      "delete_message": "Ban co chac chan muon xoa tin nhan nay?",
+      "clear_all": "Hanh dong nay khong the hoan tac! Ban co chac chan muon xoa tat ca tin nhan?"
+    },
+    "pagination": {
+      "previous": "Truoc",
+      "page": "Trang {page} / {total}",
+      "next": "Sau"
+    },
+    "no_messages": "Khong co tin nhan nao.",
+    "clear": {
+      "title": "⚠️ Xoa Tat Ca Tin Nhan",
+      "warning": "Hanh dong nay khong the hoan tac. Nhap cum tu xac nhan ben duoi.",
+      "placeholder": "DELETE ALL MESSAGES",
+      "button": "Xoa tat ca tin nhan"
+    }
+  },
+  "files": {
+    "title": "Danh Sach Tep",
+    "table": {
+      "id": "ID",
+      "filename": "Ten tep",
+      "size": "Kich thuoc",
+      "type": "Loai",
+      "uploader": "Nguoi tai len",
+      "status": "Trang thai",
+      "time": "Thoi gian"
+    },
+    "status": {
+      "complete": "Hoan tat",
+      "pending": "Chua hoan tat"
+    },
+    "uploader_deleted": "Da xoa",
+    "no_files": "Khong co tep tin nao."
+  },
+  "error": {
+    "page_not_found": "Khong tim thay trang",
+    "server_error": "Loi may chu",
+    "admin_exists": "Tai khoan quan tri da ton tai.",
+    "setup_username": "Ten nguoi dung phai co 3-30 ky tu chu, so hoac gach duoi.",
+    "password_mismatch": "Mat khau khong khop.",
+    "password_weak": "Mat khau phai co it nhat 8 ky tu voi it nhat 3 trong so: chu hoa, chu thuong, so, ky tu dac biet.",
+    "login_required": "Vui long nhap ten nguoi dung va mat khau.",
+    "login_invalid": "Ten nguoi dung hoac mat khau khong hop le.",
+    "user_not_found": "Khong tim thay nguoi dung.",
+    "message_not_found": "Khong tim thay tin nhan.",
+    "operation_failed": "Thao tac that bai: {error}",
+    "clear_confirmation": "Vui long nhap cum tu xac nhan 'DELETE ALL MESSAGES'.",
+    "auth_required": "Vui long dang nhap voi vai tro quan tri vien truoc."
+  },
+  "success": {
+    "admin_created": "Da tao tai khoan quan tri thanh cong!",
+    "logout": "Ban da dang xuat.",
+    "admin_exists": "Tai khoan quan tri da ton tai.",
+    "user_disabled": "Nguoi dung #{id} da bi vo hieu hoa.",
+    "user_activated": "Nguoi dung #{id} da duoc kich hoat lai.",
+    "password_reset": "Mat khau cua nguoi dung #{id} da duoc dat lai thanh: {pwd} (vui long chia se voi nguoi dung, ho phai doi mat khau khi dang nhap lan sau)",
+    "message_deleted": "Tin nhan #{id} da duoc xoa.",
+    "messages_cleared": "Da xoa tat ca tin nhan ({count} tin nhan)."
+  }
+}

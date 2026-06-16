@@ -1,26 +1,26 @@
 {% extends "base.html" %}
-{% block title %}仪表盘 - 管理面板{% endblock %}
+{% block title %}{{ _('dashboard.title') }} - {{ _('nav.brand') }}{% endblock %}
 
 {% block content %}
-<h1>📊 仪表盘</h1>
-<p>欢迎，{{ username }}。</p>
+<h1>📊 {{ _('dashboard.title') }}</h1>
+<p>{{ _('dashboard.welcome').format(username=username) }}</p>
 
 <div class="stats-grid">
     <div class="stat-card">
         <span class="stat-number">{{ stats.active_users }}</span>
-        <span class="stat-label">活跃用户</span>
+        <span class="stat-label">{{ _('dashboard.stats.active_users') }}</span>
     </div>
     <div class="stat-card">
         <span class="stat-number">{{ stats.deleted_users }}</span>
-        <span class="stat-label">已注销用户</span>
+        <span class="stat-label">{{ _('dashboard.stats.deleted_users') }}</span>
     </div>
     <div class="stat-card">
         <span class="stat-number">{{ stats.total_messages }}</span>
-        <span class="stat-label">消息总数</span>
+        <span class="stat-label">{{ _('dashboard.stats.total_messages') }}</span>
     </div>
     <div class="stat-card">
         <span class="stat-number">{{ stats.total_files }}</span>
-        <span class="stat-label">上传文件</span>
+        <span class="stat-label">{{ _('dashboard.stats.total_files') }}</span>
     </div>
 </div>
 {% endblock %}

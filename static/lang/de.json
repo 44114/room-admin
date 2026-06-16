@@ -1,0 +1,151 @@
+{
+  "meta": {
+    "name": "Deutsch",
+    "code": "de"
+  },
+  "nav": {
+    "brand": "🛡️ Admin-Panel",
+    "dashboard": "Dashboard",
+    "users": "Benutzer",
+    "messages": "Nachrichten",
+    "files": "Dateien",
+    "logout": "Abmelden",
+    "language": "Sprache"
+  },
+  "footer": {
+    "text": "Chat-Raum Admin-Panel — Nur fur Administratoren"
+  },
+  "login": {
+    "title": "🔑 Admin-Login",
+    "form": {
+      "username": "Benutzername",
+      "username_placeholder": "Admin-Benutzername",
+      "password": "Passwort",
+      "password_placeholder": "Admin-Passwort",
+      "submit": "Anmelden"
+    }
+  },
+  "setup": {
+    "title": "🔐 Erstmalige Einrichtung",
+    "description": "Kein Admin-Konto gefunden. Bitte erstellen Sie ein Admin-Konto.",
+    "form": {
+      "username": "Admin-Benutzername",
+      "username_placeholder": "3-30 Buchstaben, Ziffern oder Unterstriche",
+      "password": "Admin-Passwort",
+      "password_placeholder": "Mindestens 8 Zeichen mit 3+ Zeichentypen",
+      "password_confirm": "Passwort bestatigen",
+      "password_confirm_placeholder": "Passwort erneut eingeben",
+      "submit": "Admin-Konto erstellen"
+    }
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "welcome": "Willkommen, {username}.",
+    "stats": {
+      "active_users": "Aktive Benutzer",
+      "deleted_users": "Geloschte Benutzer",
+      "total_messages": "Nachrichten insgesamt",
+      "total_files": "Hochgeladene Dateien"
+    }
+  },
+  "users": {
+    "title": "Benutzerverwaltung",
+    "table": {
+      "id": "ID",
+      "username": "Benutzername",
+      "status": "Status",
+      "registered": "Registriert",
+      "actions": "Aktionen"
+    },
+    "status": {
+      "active": "Aktiv",
+      "deleted": "Geloscht"
+    },
+    "action": {
+      "disable": "Deaktivieren",
+      "reset_password": "Passwort zurucksetzen",
+      "activate": "Aktivieren"
+    },
+    "confirm": {
+      "disable": "Sind Sie sicher, dass Sie diesen Benutzer deaktivieren mochten?",
+      "reset_password": "Sind Sie sicher, dass Sie das Passwort dieses Benutzers zurucksetzen mochten?",
+      "activate": "Sind Sie sicher, dass Sie diesen Benutzer reaktivieren mochten?"
+    }
+  },
+  "messages": {
+    "title": "Nachrichtenverwaltung",
+    "total": "{count} Nachrichten insgesamt",
+    "table": {
+      "id": "ID",
+      "sender": "Absender",
+      "content": "Inhalt",
+      "room": "Raum",
+      "time": "Zeit",
+      "actions": "Aktionen"
+    },
+    "sender_deleted": "Geloscht",
+    "content_file": "(Datei)",
+    "action": {
+      "delete": "Loschen"
+    },
+    "confirm": {
+      "delete_message": "Sind Sie sicher, dass Sie diese Nachricht loschen mochten?",
+      "clear_all": "Diese Aktion kann nicht ruckgangig gemacht werden! Sind Sie sicher, dass Sie alle Nachrichten loschen mochten?"
+    },
+    "pagination": {
+      "previous": "Zuruck",
+      "page": "Seite {page} / {total}",
+      "next": "Weiter"
+    },
+    "no_messages": "Keine Nachrichten.",
+    "clear": {
+      "title": "⚠️ Alle Nachrichten Loschen",
+      "warning": "Diese Aktion kann nicht ruckgangig gemacht werden. Geben Sie unten den Bestatigungssatz ein.",
+      "placeholder": "DELETE ALL MESSAGES",
+      "button": "Alle Nachrichten loschen"
+    }
+  },
+  "files": {
+    "title": "Dateiliste",
+    "table": {
+      "id": "ID",
+      "filename": "Dateiname",
+      "size": "Groesse",
+      "type": "Typ",
+      "uploader": "Hochlader",
+      "status": "Status",
+      "time": "Zeit"
+    },
+    "status": {
+      "complete": "Abgeschlossen",
+      "pending": "Unvollstandig"
+    },
+    "uploader_deleted": "Geloscht",
+    "no_files": "Keine Dateien."
+  },
+  "error": {
+    "page_not_found": "Seite nicht gefunden",
+    "server_error": "Serverfehler",
+    "admin_exists": "Ein Admin-Konto existiert bereits.",
+    "setup_username": "Der Benutzername muss 3-30 Buchstaben, Ziffern oder Unterstriche enthalten.",
+    "password_mismatch": "Die Passworter stimmen nicht uberein.",
+    "password_weak": "Das Passwort muss mindestens 8 Zeichen lang sein und mindestens 3 der folgenden enthalten: Grossbuchstaben, Kleinbuchstaben, Ziffern, Sonderzeichen.",
+    "login_required": "Bitte geben Sie Ihren Benutzernamen und Ihr Passwort ein.",
+    "login_invalid": "Ungultiger Benutzername oder ungultiges Passwort.",
+    "user_not_found": "Benutzer nicht gefunden.",
+    "message_not_found": "Nachricht nicht gefunden.",
+    "operation_failed": "Vorgang fehlgeschlagen: {error}",
+    "clear_confirmation": "Bitte geben Sie den Bestatigungssatz 'DELETE ALL MESSAGES' ein.",
+    "auth_required": "Bitte melden Sie sich zuerst als Admin an."
+  },
+  "success": {
+    "admin_created": "Admin-Konto erfolgreich erstellt!",
+    "logout": "Sie wurden abgemeldet.",
+    "admin_exists": "Admin-Konto existiert bereits.",
+    "user_disabled": "Benutzer #{id} wurde deaktiviert.",
+    "user_activated": "Benutzer #{id} wurde reaktiviert.",
+    "password_reset": "Passwort von Benutzer #{id} wurde zuruckgesetzt auf: {pwd} (teilen Sie es dem Benutzer mit, er muss es bei der nachsten Anmeldung andern)",
+    "message_deleted": "Nachricht #{id} wurde geloscht.",
+    "messages_cleared": "Alle Nachrichten geloscht ({count} Nachrichten)."
+  }
+}

@@ -1,21 +1,63 @@
-# Environment
+# Environment — sensitive credentials, never commit
 .env
 
 # Python
 __pycache__/
 *.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+*.egg
+dist/
+build/
+eggs/
+*.manifest
+*.spec
+
+# Virtual environments
 venv/
 .venv/
-*.egg-info/
+env/
+.env/
+virtualenv/
 
-# IDE
+# pip
+pip-log.txt
+pip-delete-this-directory.txt
+
+# pytest
+.pytest_cache/
+htmlcov/
+.coverage
+.coverage.*
+coverage.xml
+
+# IDE / Editor
 .idea/
 .vscode/
 *.swp
+*.swo
+*~
+*.sublime-project
+*.sublime-workspace
 
 # OS
 .DS_Store
+.DS_Store?
+._*
 Thumbs.db
+Desktop.ini
 
 # Logs
 *.log
+*.log.*
+
+# Backups / local overrides
+*.bak
+*.sql.gz
+instance/
+config.local.py
+
+# MySQL socket
+*.sock
